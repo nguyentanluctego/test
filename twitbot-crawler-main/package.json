@@ -1,0 +1,29 @@
+{
+  "name": "crawler",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "build/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsnd --respawn src/app.ts",
+    "dev-smith": "tsnd --respawn src/crawlee.ts",
+    "debug": "node -r ts-node/register --inspect=127.0.0.1:9230 src/app.ts",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "query-string": "^8.1.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "crawlee": "^3.3.1",
+    "dotenv": "^10.0.0",
+    "ghost-cursor": "^1.1.6",
+    "puppeteer": "^11.0.0",
+    "ts-node": "^10.9.1"
+  }
+}

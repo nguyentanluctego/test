@@ -1,0 +1,9 @@
+{
+	"id": "IpL70Ao9DMQfqje",
+	"json": "{\"id\":\"IpL70Ao9DMQfqje\",\"url\":\"https://twitter.com/i/flow/login\",\"loadedUrl\":\"https://twitter.com/i/flow/login\",\"uniqueKey\":\"https://twitter.com/i/flow/login\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":2,\"errorMessages\":[\"TimeoutError: Timeout exceeded while waiting for event\\n    at Timeout.<anonymous> (C:\\\\Users\\\\Tan Luc\\\\Desktop\\\\twitbot-crawler-main\\\\twitbot-crawler-main\\\\node_modules\\\\puppeteer\\\\src\\\\common\\\\helper.ts:149:9)\\n    at listOnTimeout (node:internal/timers:564:17)\\n    at processTimers (node:internal/timers:507:7)\",\"Error: No node found for selector: input[name=\\\"password\\\"]\\n    at assert (C:\\\\Users\\\\Tan Luc\\\\Desktop\\\\twitbot-crawler-main\\\\twitbot-crawler-main\\\\node_modules\\\\puppeteer\\\\src\\\\common\\\\assert.ts:23:21)\\n    at DOMWorld.type (C:\\\\Users\\\\Tan Luc\\\\Desktop\\\\twitbot-crawler-main\\\\twitbot-crawler-main\\\\node_modules\\\\puppeteer\\\\src\\\\common\\\\DOMWorld.ts:499:11)\\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at login (C:\\\\Users\\\\Tan Luc\\\\Desktop\\\\twitbot-crawler-main\\\\twitbot-crawler-main\\\\src\\\\crawlee.ts:28:3)\\n    at PuppeteerCrawler.requestHandler [as userProvidedRequestHandler] (C:\\\\Users\\\\Tan Luc\\\\Desktop\\\\twitbot-crawler-main\\\\twitbot-crawler-main\\\\src\\\\crawlee.ts:42:5)\\n    at wrap (C:\\\\Users\\\\Tan Luc\\\\Desktop\\\\twitbot-crawler-main\\\\twitbot-crawler-main\\\\node_modules\\\\@apify\\\\src\\\\index.ts:77:27)\"],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":5}}}",
+	"method": "GET",
+	"orderNo": 1684084953553,
+	"retryCount": 2,
+	"uniqueKey": "https://twitter.com/i/flow/login",
+	"url": "https://twitter.com/i/flow/login"
+}
