@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-import { config } from './config';
+// import { config } from './config';
 import { TweetCrawling } from './tweet-crawling';
 import { Twitter } from './twitter';
 
@@ -33,12 +33,11 @@ import { Twitter } from './twitter';
 
     await page.bringToFront();
     
-    const twitter = new Twitter(page, config.refreshCountReset, {
-        username: config.username,
-        password: config.password,
-        phoneNumber: config.phoneNumber
+    const twitter = new Twitter(page, 5, {
+        username: "tanlucit",
+        password: "Luc01696408846",
+        phoneNumber: "0328826810"
     });
-
     const tweetCrawling = new TweetCrawling(secondPage);
 
     twitter.on('shortened-post', post => tweetCrawling.queue(post));

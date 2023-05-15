@@ -11,11 +11,13 @@ export class TweetCrawling {
     ) { }
     
     async savePost(tweet: any) {
-        return request({
-            url: '/tweets',
-            method: 'POST',
-            data: tweet
-        });
+        console.log("Saving post",tweet);
+        
+        // return request({
+        //     url: '/tweets',
+        //     method: 'POST',
+        //     data: tweet
+        // });
     }
 
     goToTweetDetail(post: any) {

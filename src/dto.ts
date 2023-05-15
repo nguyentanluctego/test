@@ -133,10 +133,11 @@ interface ExtendedEntities {
   media: Media[];
 }
 
-interface Tweet {
+export interface Tweet {
   bookmark_count: number;
   bookmarked: boolean;
   created_at: string;
+  display_text_range: []
   conversation_id_str: string;
   entities: Mention;
   extended_entities: ExtendedEntities;
@@ -153,6 +154,8 @@ interface Tweet {
   retweeted: boolean;
   user_id_str: string;
   id_str: string;
+  // Profile data 
+  profile?: any;
 }
 
 export interface TweetData {
