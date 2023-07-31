@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+    env_file:
+      - ./.env_prod
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./user_data:/app/user_data
+      - ./tweets:/app/tweets
+    depends_on:
+      - redis
+    command: node ./build/index.js
+  redis:
+    image: redis
+    ports:
+      - 56379:6379
+    command: redis-server --appendonly yes

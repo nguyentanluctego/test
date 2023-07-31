@@ -1,0 +1,24 @@
+stages:
+  - build-and-publish-image
+variables:
+  VARIABLE_DATA: Gitlab-CI-YAML
+
+build-and-publish-image:
+  stage: build-and-publish-image
+  only:
+    - main
+    - staging
+  image: docker:20-git
+  services:
+    - docker:20-dind
+  script:
+    # get node app version from package.json for use in tagging docker image
+    - apk update && apk add jq
+    - export VERSION=`jq -r ".version" < ./package.json`
+    # login to docker
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    # build and tag docker image
+    - docker build -t $CI_REGISTRY_IMAGE:$VERSION -t $CI_REGISTRY_IMAGE:latest .
+    # publish finished image
+    - docker push $CI_REGISTRY_IMAGE:latest
+    - docker push $CI_REGISTRY_IMAGE:$VERSION

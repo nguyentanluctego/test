@@ -139,8 +139,8 @@ export interface Tweet {
   created_at: string;
   display_text_range: []
   conversation_id_str: string;
-  entities: Mention;
-  extended_entities: ExtendedEntities;
+  entities?: Mention;
+  extended_entities?: ExtendedEntities;
   favorite_count: number;
   favorited: boolean;
   full_text: string;

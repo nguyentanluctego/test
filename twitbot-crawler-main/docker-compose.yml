@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:12
+    # restart: always
+    environment:
+      POSTGRES_USER: tanluc
+      POSTGRES_PASSWORD: tanluc
+      POSTGRES_DB: crawler
+    # volumes:
+    #   - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
